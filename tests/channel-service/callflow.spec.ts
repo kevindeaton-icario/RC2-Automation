@@ -6,7 +6,7 @@ test.describe("Uploading and Retrieving a WAV file from Channel Service", () => 
   test.describe.configure({ mode: "serial" });
   test.use({
     baseURL: process.env.API_URL,
-    storageState: "./auth.json",
+    storageState: ".config/auth.json",
   });
   
   const uuid = "042aa830-2606-4680-9fe0-bfbd5b2d510b"; // Hardcoded for now but want to generate randomly with uuidv4
