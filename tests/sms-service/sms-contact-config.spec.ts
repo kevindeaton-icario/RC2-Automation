@@ -1,7 +1,7 @@
 import test, { expect } from "@playwright/test";
 import { faker } from "@faker-js/faker";
 
-test.describe("Managing SMS Contact COnfigurations through SMS Service", () => {
+test.describe("Managing SMS Contact Configurations through SMS Service", () => {
   test.describe.configure({ mode: "serial" });
   test.use({
     baseURL: process.env.API_URL,
