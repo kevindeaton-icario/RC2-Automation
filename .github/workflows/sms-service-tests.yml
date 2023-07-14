@@ -4,11 +4,13 @@ on:
     types: closed
     branches: main
   workflow_dispatch:
-env: 
-  PAT_USERNAME: ${{ secrets.PAT_USERNAME }}
-  PAT_PASSWORD: ${{ secrets.PAT_PASSWORD }}
+
 jobs:
   test:
+    environment: test
+    env: 
+      PAT_USERNAME: ${{ secrets.PAT_USERNAME }}
+      PAT_PASSWORD: ${{ secrets.PAT_PASSWORD }}
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
