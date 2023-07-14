@@ -18,12 +18,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        with: 
+          path: ~/.npm
+          key: dependecy-modules-${{ hashFiles('**/pakage-lock.json') }}
       - name: Install dependencies
         run: npm ci
-      # - name: Install Playwright Browsers
-      #   run: npx playwright install --with-deps
-      - name: Output Tests Description
-        run: echo "Running SMS Service Playwright Tests"
       - name: Run Playwright tests
         run: npm run sms-service-test
       - name: Upload Test Results
