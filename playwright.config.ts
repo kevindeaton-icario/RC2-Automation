@@ -20,15 +20,15 @@ export default defineConfig({
   },
 
   projects: [
-    // {
-    //   name: "setup",
-    //   testDir: "./config/",
-    //   testMatch: "global-setup.ts"
-    // },
+    {
+      name: "setup",
+      testDir: "./config/",
+      testMatch: "global-setup.ts"
+    },
 
     {
       name: "chromium",
-      // dependencies: ["setup"],
+      dependencies: ["setup"],
       use: { ...devices["Desktop Chrome"], storageState: "./config/auth.json" },
     },
 
