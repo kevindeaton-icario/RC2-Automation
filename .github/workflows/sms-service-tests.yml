@@ -22,7 +22,7 @@ jobs:
         uses: actions/cache@v3
         with: 
           path: ~/.npm
-          key: dependecy-modules-${{ hashFiles('**/pakage-lock.json') }}
+          key: dependecy-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm ci
       - name: Run Playwright tests
