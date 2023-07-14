@@ -1,0 +1,20 @@
+{
+  "name": "rc2-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "channel-service-test": "npx playwright test channel-service" ,
+    "sms-service-test": "npx playwright test sms-service" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@playwright/test": "^1.35.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
