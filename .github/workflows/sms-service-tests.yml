@@ -4,6 +4,9 @@ on:
     types: closed
     branches: main
   workflow_dispatch:
+env: 
+  PAT_USERNAME: ${{ secrets.PAT_USERNAME }}
+  PAT_PASSWORD: ${{ secrets.PAT_PASSWORD }}
 jobs:
   test:
     timeout-minutes: 10
