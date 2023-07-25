@@ -9,6 +9,7 @@ test.describe("Managing SMS Contact Configurations through SMS Service", () => {
   });
 
   const smsContactConfig = generateJsonBody();
+  console.log(smsContactConfig)
 
   test("Get all existing SMS Contact Configurations", async ({ request }) => {
     const response = await request.get(`sms-service/contact/config/all`);
